@@ -18,9 +18,7 @@ minimumList([First|Tail], Smallest) :- minimumList(Tail, CurrentSmallest), small
 %-- Sort the elements
 %-process
 
-sortedPair([Value],[Value]).
-sortedPair([First, Second], [First, Second]) :- Second > First.
-sortedPair([First, Second], [Second, First]) :- First > Second.
-
-sorted([], [Second, First]) :- First > Second.
-
+sorted([Value],[Value]).
+sorted([First, Second], [First, Second]) :- Second >= First.
+sorted([First, Second], [Second, First]) :- First > Second.
+sorted([First, Second, Third], Sorted) :- 
