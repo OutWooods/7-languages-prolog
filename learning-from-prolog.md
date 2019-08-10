@@ -58,3 +58,14 @@ But the more you do, the more you spot the patterns and understand why you do it
 It's a bit the same for the anki cards I'm using. They are facts that I do understand but don't fully get. But repeating them daily gives me time to focus on them, in different contexts. And it enables me to see different connections. 
 
 The main thing I learn more and more as I code - is everything is essentially just words. You can manipulate change then, you can do what you want. YOu just need to know how.
+
+6. Ways to solve problems
+
+1. prolog and declarative code really encourages you to follow a different way of solving a problem to perscriptive.
+   prolog is really about defining your problem, then really defining each and every rule and case.
+
+   This is quite similar to TDD really. Think about the rules, the edge cases, and then solve each one step at a time. 
+
+
+IO - how languages are built
+Prolog - how to define and solve problems in code

@@ -1,66 +1,38 @@
-In the 1880s in the US the census took 8 years to tabulate
-Hollerith came up with a system of punched cards to store information. Which was used for the 1890 census. 
-Holleriths firm become the Computer Tabulating Recording company. Later. International Buisiness machines. 
-
-By the 1960s its estimated a quarter of computing power was on sorting. FInding largest and smallest. 
-
-Sorting is used for your emails, for your facebook feed, for names in your phones phonebook. 
-
-As things you want to sort increases, the cost grows. Disseconomies of scale. 
-Scale can hurt. 
-
-Compuer scienstsis test algorithms on their worst case. 
-WOrld records for their best case.
-
-Big-O notation. It explains the relationship. How complex the algorithm is in t erms of worst case scenario. 
-O(1) (or O(n^0)) - the number doesn't matter. Its a fixed time. E.g. cleaning your house for a party. Number of guests does not matter. Taking the first value from an array.
-O(log n) <- can sometimes be used as an improvement on a class O(n) alogoritha. Divide and conquer algorithms are always this. Remember we don't care about the base - we care about the scale rate.
-O(n) - linear growth - the time it takes to pass the tofu around the table. Double the guests - double the time. Adding up an array.
-O(n log n) - linearithmic time - merge sort fits this. Iterations that use divide and conquer are O(n log n).
-O(n^2) -  quadratic growth - every guest hugs every other guest. You don't do O(2N^2) because the n^2 trumps it - the highest power matters most.  nested loops working over the same collection again are always n^2.
-O(n!) - factorial - go through every combination of playing cards.
-
-An improvement on O(N^2) is sometimes O(n log n). 
-
-Bubble sort lands us in quadratic time. You go along, comparing books in pairs. Loop back to the start. Once you don't change. You don't change.
-Insertion sort - not really much quicker. You put one book in the middle. Get a second book, see if that goes left or right.
-Merge sort - its a divide and conquer approach. Merge sort works by splitting all the elements in a list down to smaller two element lists which can then be sorted easily in one pass. You keep splitting down until you have pairs. Then you recursively merge these lists back into a larger list. 
-
-Merge sort - stage one. SPlit split split until you have singular parts O(n).  Then you merge the lists back together O(log n). The way you merge is you get the smallest numbers from the two groups. Compare. Place the smallest one in. Then Take the smallest one left compare it to the smallest one on the other list. Loop until all are gone.
-
-Selection sort - O(n^2). Find the smallest value - put it at the start and swap it with the next value.
-
-Bucket sort - putting things into categories is O(nm) time - m being the number of categories. So Big O notation is O(n).
-
-Binary search.
-
-Simplify
-O(1 + 2) 
-O(n * 3)
-O(n^2 + 3) 
-O(n! + n^ 2).
-
-Premier league is a round-round so its O(n^2) 
-
-Gauss summary equation S = n(n +1)/2 to add up continous numbers.
-
-log2(512) = X means what? Log Base 2 to the ower of X = 512.Aka how many times do you multiple 2 by itself to get 512.
-log on its own means to the 10. 
-
-log(100) = 2
-
-so O(n log n)
-log2(n)=x
-
-Rememeber nested loops of the same list are essentially O(n) inside an O(n) so O(n * n). But what if we replaced one of the O(n) operations with O(log n)? Then we'd have an O(n log n) operation...
-
-
-Space complexity vs time. 
-Algorithms - you can think about time complexity (how long will this take).
-But also space complexity - what are the resource requirements of your algorithm.
-
-A programme has two ways to remember things. The heap and the stack.
-When a variable is declared in a block of code it is stored on the stack. When a block of code goes out of scope, the variables are removed from the stack. 
-
-Stack overflow means the stack has run out of space.
+What was one of the sparks for computers?,sorting - In the 1880s in the US the census took 8 years to tabulate
+By the 1960s its estimated a quarter of computing power was on what?, sorting. FInding largest and smallest. 
+Where is sorting used(3)?,Sorting is used for your emails for your facebook feed for names in your phones phonebook. 
+What is a sorting problem an example of?,Diseconomies of scale - As things you want to sort increases the cost grows. Disseconomies of scale. 
+How do computer scientists often test algorithms?,on their worst case scenario
+WHat is Big O notation?,it explains the relationship - how complex an algorithm is. It simplifies down to just the abstract relationship not the specifics
+Whats the quickest relationship?,O(1) or O(n^2)
+Give an example of an O(1) task?,cleaning the hose for a party
+Give an example of an O(1) array function?,getting the first value from an array
+Order the 6 Big O relationships?,O(1) - O(log n) - o(n) - O(n log n) - O(n^2) - O(n!)
+Whay's a class Big O that is an improvement on O(n)?,O(log n).
+What sort of algorithms are O(log n)?,Divide and conquer
+With Big O do we care about small cases?,no we're thinking of the scale rate - what would it be like with a million 0 thousands- trillions
+What is linear growth in O notation?,O(n)
+Give an example for dinner parties of O(n)?,the time it takes to pass the tofu around the table. 
+Give an example for of O(n)?,the time it takes to pass the tofu around the table. 
+Give an example with arrays for of O(n)?,add up all elements in an array
+What is often an improvement on O(n^2) problems?,O(n log n)
+Give a sorting algorithm which is O(n log n)?,merge sort. 
+What is bubble sort in Big O?,O(n^2)
+What are nested loops working over the same collection again in Big O?,O(n^2)
+What big O is going through every combination of playing cards?,O(n!) <- factorial
+What is bubble sort?,go along the line comparing two at a time. If the final array is the same as the start then you're finished.
+What is insertion sort?,You put one thing in the middle. Get a second. See if it goes left or right. 
+What is merge sort stage 1?,O(n) - split until you have singular parts. 
+What is merge sort stage 2?,O(log n) - Merge your lists back together. Get the smallest numbers from the two groups being merged. COmpare. Place the smallest one in. Then compare the next two smallest. Repeat.
+What is Bucket sort in Big O?,O(nm) time - m being the number of categories. So its O(n)
+Simplify in Big O  O(1 + 2)?,O(1)
+Simplify in Big O  O(n * 3)?,O(n)
+Simplify in Big O  O(n^2 + 3)?,O(n^2)
+Simplify in Big O  O(n! + n^ 2)?,O(n!)
+Premier league is a round-robin so what is it in big O?,O(n^2) 
+What is the Gauss summary equation to add up continous numbers?,S = n(n + 1)/2
+log2(512) = X means what?, Log Base 2 to the ower of X = 512.Aka how many times do you multiple 2 by itself to get 512.
+What two complexity issues have you got with algorithms?,Space complexity - resources. Time complexity (how long)
+What two ways have programmes got to remember things?,The heap and the stack
+What does stack overflow mean?,stack has run out of space.
 

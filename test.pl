@@ -1,24 +1,61 @@
-%-- Sort the elements of a list
+%-- Make a soduku solver to work on 9 X 9 puzzles
 
-%-- Proccess
-%-- As usual building up from first principals. I know I could convert the rules for smallest into one line, but I think its more readable in this format.
+%-- Rule one - board should be a solution
+%-- Im going for a lists as row so you provide 9 lists with 9 rows.
 
-%-- Final result
-smallest(A, B, Value) :- A = B, Value = B.
-smallest(A, B, Value) :- A > B, Value = B.
-smallest(A, B, Value) :- B > A, Value = A.
+valid_numbers([],[]).
+valid_numbers([Row|Remaining],[Row|Validated]) :-
+    fd_domain(Row, 1, 9),
+    valid_numbers(Remaining, Validated).
 
-largest(A, B, Value) :- A = B, Value = B.
-largest(A, B, Value) :- A > B, Value = A.
-largest(A, B, Value) :- B > A, Value = B.
+valid_row([],[]).
+valid_row([Row|Remaining],[Row|Validated]) :- 
+    fd_all_different(Row),
+    valid_row(Remaining, Validated).
+    
+column_builder([],[],[]).
+column_builder([[Head|Rest]|Tail],[Head|SameCol],[]) :- 
+   Rest = [],
+   column_builder(Tail, SameCol, LeftOver).
+column_builder([[Head|Rest]|Tail],[Head|SameCol],[Rest|LeftOver]) :- 
+   column_builder(Tail, SameCol, LeftOver).
 
-minimumList([First, Second], Smallest) :- smallest(First, Second, Smallest). 
-minimumList([First|Tail], Smallest) :- minimumList(Tail, CurrentSmallest), smallest(First, CurrentSmallest, Smallest).  
+valid_col([],[]).
+valid_col(Rows,[Col|Validated]) :- 
+    column_builder(Rows, Col, Remaining),
+    fd_all_different(Col),
+    valid_col(Remaining, Validated).
 
-%-- Sort the elements
-%-process
+box_rule([]).
+box_rule([Box|[Box2|[Box3|Remaining]]]) :-
+     Box2 = [],
+     Box3 = [],
+     Box = [],
+     box_rule(Remaining).
+box_rule([Box|[Box2|[Box3|Remaining]]]) :-
+     append([First, Second, Third], Remaining1, Box),
+     append([Fourth,Fifth, Sixth], Remaining2, Box2),
+     append([Seventh, Eight, Nineth], Remaining3, Box3),
+     fd_all_different([First, Second, Third, Fourth, Fifth, Sixth, Seventh, Eight, Nineth]),
+     boxRule([Remaining1|[Remaining2|[Remaining3|Remaining]]]).
 
-sorted([Value],[Value]).
-sorted([First, Second], [First, Second]) :- Second >= First.
-sorted([First, Second], [Second, First]) :- First > Second.
-sorted([First, Second, Third], Sorted) :- 
+%-- get the same index of every row and put them into a new array. ALl values at the same index should be true.
+    
+sudoku(Board, Solution) :- 
+    Board = Solution,
+    Board = [[_,_,_,_,_,_,_,_,_],
+	     [_,_,_,_,_,_,_,_,_],
+	     [_,_,_,_,_,_,_,_,_],
+	     [_,_,_,_,_,_,_,_,_],
+	     [_,_,_,_,_,_,_,_,_],
+	     [_,_,_,_,_,_,_,_,_],
+	     [_,_,_,_,_,_,_,_,_],
+	     [_,_,_,_,_,_,_,_,_],
+	     [_,_,_,_,_,_,_,_,_]],
+    length(Board, 9),
+    valid_numbers(Board, Solution).
+    valid_row(Board, Solution),
+    valid_col(Board, Solution).
+
+
+
