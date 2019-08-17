@@ -1,22 +1,22 @@
-1. A totally different way of looking at programming
+# So...What have I learnt? 
 
-IO helped me see how JS worked but more deeply understand how Ruby, PhP and other languages implemented OO. By adding a contrast. 
+## A totally different way of looking at programming
 
-It also made me think alot about metaprogramming and how to manipulate the underlying code I work. 
+IO helped me see how JS worked but more deeply understand how Ruby, PhP and other languages implemented OO. It contrasted with them, but ultimately is still a language that still played in the world of OO and imperative programming. 
 
+But Prolog is just a completely different set of ideas, a whole different way of seeing code. Declarative programming takes (and is still taking) a bit of time to get your head around just, why would you do it like this? But more and more you can see the power of it. 
 
-2. It's made me appreciate more what SQL is about
+The more different you go, the more you see that things you take for granted (e.g. 'obviously I have to explain to the programme how to solve the problem') are ultimately design decisions. Someone has chosen that, but they could have chosen something else. Why pick that approach? There are definately points where you start appreciating how easy ruby is to use too - comparisson doesn't just point out flaws, it also makes you appreciate more how good you had it.
 
-SQL is another declarative language. It explains why doing alot of imperative coding in SQL is so weird. Its bolted on. SQL was always about give me a request and I will fulfill it. Don't tell me what to do. 
+## It's made me appreciate more what SQL is about
 
-You might plan how to phrase a request in SQL to help it optimise. But more and more that's SQL's job too. 
+To be honest, before I used Prolog, I just saw SQL as some sort of glorified calculator, it wasn't a real language. It was just a set of instructions. It explains why SQL can be a real pain, when you tried to code imperatively with it. Those features are bolted on. SQL was always about 'give me a request and I will fulfill it'. Don't tell me what to do. 
 
-It makes the language feel almost fake and mysterious compared to Ruby or PhP.
+You might plan how to phrase a request in SQL to help it optimise. But more and more that's SQL's job too. And I imagine that's the case with prolog. If it continued, you'd make it better and better at optimising rules.
 
+## It's excited me about logic
 
-3. It's excited me about logic
-
-It's intriguing to see a different approach.
+It's intriguing to see a different approach - but also one based around mathematical logic. Prolog's got me reading around the subject, reading more about formal logic and mathematical boolean logic. To understand what predicates are - why unification is different from assignment. 
 
 I think it's made me more open to understanding the funcational paradigm. I've been working solely with imperative languages (other than SQL, but even then I often do it with an ORM). And so it's made me think. 
 
@@ -27,45 +27,23 @@ Instead with Prolog it's about thinking about the rules, its almost a bit revers
 
 You can see how it can produce some quite novel solutions and ideas from basic logic. 
 
-5. It's helped me understand recursion more
+## It's helped me understand recursion more
 
-Alot of the challenges have involved recursion. And its forced me to practise building up a recursive function.
-But particularly, I've found it quite a helpful approach - writing the rules out. Slowly building up a pattern to find the base case and then to find the recusion. 
-It's alot easier in the long run with prolog because you can't just write it as a loop first. And because it's focused on the rules not actually the proccess it forces you to clarify your thinking alot more. 
-rewind([Value], [Value]).
+Prolog is the first language I've dealt with which hasn't had loops. So alot of the challenges have involved recursion. And its forced me to practise building up a recursive function.
+
+But particularly, I've found the nature of prolog a good way to learn about how to write recusrsive functions. Prolog wants you to work out the rules - slowly building up a pattern to find the base case and then to find the recusion. 
+
+It's alot harder at first prolog because you can't just write it as a loop first - you have to actually think recursively. And because it's focused on the rules not actually the proccess it forces you to clarify your thinking alot more. 
 
 In many ways I find the declarative way of defining recursion in some ways simpler. It's going back to first principals. But it is harder too.
 Also not being able to alter variables is highly alein to me - but I hope will set me up well for haskel etc.
 
-But also the declarative way of defining recursive rules helps you understand how you build those recursive results. 
-
 I've also always been less of a fan of recursion - looping makes alot more intuative sense to me. But I can see why recursion is in some ways more expressive. As in many ways, its how we probably instinctively approach some problems.
 
-6. It's a really useful skill to hone
+## It's helping me change how I approach problems 
 
-It's pushing me to think less and less about implementation first. But instead, defining the problem, working out the rules and facts. It's really quite good for getting you to go back to first principals.
+The declarative approach is pushing me to think less about implementation - and instead really really focus on defining the problem, working out the rules and facts. It's really quite good for getting you to go back to first principals.
 
-7. Learning theory - do before understanding
+This is particularly helpful for my TDD approach, as really TDD is all about - don't think about how you'll implement this, think about the rules of the code. Then meet those rules.
 
-One thing with prolog is that it's approach is so different to anything I've done before.
-But also, I've found the classic example - sometimes implementing things we don't udnerstand is fine. 
-
-There's a bit of a debate about this in teaching - some teachers believe in gettikng students to be able to do things, before they can understand. Arguing udnerstanding takes time, and the more you do something the more you can start to understand it. Rather than spending ages trying to understand something before doing it. 
-
-And I've found that a useful approach with prolog. I've implemented some challenges, and kind of got them, but also known how to do them. 
-But the more you do, the more you spot the patterns and understand why you do it that way.
-
-It's a bit the same for the anki cards I'm using. They are facts that I do understand but don't fully get. But repeating them daily gives me time to focus on them, in different contexts. And it enables me to see different connections. 
-
-The main thing I learn more and more as I code - is everything is essentially just words. You can manipulate change then, you can do what you want. YOu just need to know how.
-
-6. Ways to solve problems
-
-1. prolog and declarative code really encourages you to follow a different way of solving a problem to perscriptive.
-   prolog is really about defining your problem, then really defining each and every rule and case.
-
-   This is quite similar to TDD really. Think about the rules, the edge cases, and then solve each one step at a time. 
-
-
-IO - how languages are built
-Prolog - how to define and solve problems in code
+It's been pretty challenging. But Prolog is one I'd like to come back to more - it feels like something that you can scratch the surface, but really - its power takes time to emerge.
