@@ -1,6 +1,6 @@
 ## What is this?
 
-This is Week two from the book '7 Languages in 7 weeks'. In it you learn 7 languages...in seven weeks. 
+This is week three from the book '7 Languages in 7 weeks'. In it you learn 7 languages...in seven weeks. 
 Week 3 is Prolog.
 
 Each of my folders for this book follow a similar structure. There are 'dumps' where I just put largely unformatted notes down as I go. There are 'anki' files which contain questions and answers for me to memorise and there are 'questions' files which are where I do the exercises from the book and add annotations to the code. 
