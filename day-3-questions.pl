@@ -5,9 +5,9 @@ Write(Argument).
 
 format('%d %d %d | %d %d %d', [1,2,3,1,2,3]),
 
-%-- Find a way to use print predicates to print only successful solutions. How do they work? 
+%-- Find a way to use print predicates to print only successful solutions. How do they work?
 %-- if you only want it to print if its true. You just put the print after the checks. That way if its fails, they will not run.
-test(X) :- 
+test(X) :-
   X is 1,
   format('%d %d %d | %d %d %d', [1,2,3,1,2,3]),
   write("Hello").
@@ -24,24 +24,24 @@ valid_numbers([Row|Remaining],[Row|Validated]) :-
 
 %-- Rule two - all numbers should be unique in each row
 valid_rows([],[]).
-valid_rows([Row|Remaining],[Row|Validated]) :- 
+valid_rows([Row|Remaining],[Row|Validated]) :-
     fd_all_different(Row),
     valid_row(Remaining, Validated).
 
 %-- Rule three - all numbers should be unique in each column
 first_value([], [], []).
-first_value([[First|Rest]|Remaining], [First|FirstValues], [Rest|Tails]) :- 
+first_value([[First|Rest]|Remaining], [First|FirstValues], [Rest|Tails]) :-
     first_value(Remaining, FirstValues, Tails).
 
 valid_columns([[],[],[],[],[],[],[],[],[]], []).
-valid_columns(Board, [Column|Columns]) :- 
+valid_columns(Board, [Column|Columns]) :-
     first_value(Board, Column, Remaining),
     fd_all_different(Column),
     valid_column(Remaining, Columns).
 
 %-- Rule four - all numbers should be unique in each 3x3 box
 valid_boxes([]).
-valid_boxes([First, Second, Third|Rest]) :- 
+valid_boxes([First, Second, Third|Rest]) :-
     First = [],
     first_3(Rest, Remaining).
 valid_boxes([First,Second,Third|Rest]) :-
@@ -50,9 +50,9 @@ valid_boxes([First,Second,Third|Rest]) :-
     append([G,H,I], Rest3, Third),
     fd_all_different([A,B,C,D,E,F,G,H,I,J]),
     first_3([Rest1, Rest2, Rest3|Rest]).
-    
+
 %-- All put together in one sudoku board
-sudoku(Board, Solution) :- 
+sudoku(Board, Solution) :-
     Board = Solution,
     Board = [[_,_,_,_,_,_,_,_,_],
 	     [_,_,_,_,_,_,_,_,_],
