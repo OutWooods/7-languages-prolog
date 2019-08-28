@@ -7,7 +7,9 @@ Each of my folders for this book follow a similar structure. There are 'dumps' w
 
 I tried to follow a cycle of learn (aka the dump files), do (the questions files) and then memorise (the anki files).
 
-Then each week I write up some notes on learning the language, what its taught me, and also write an article on learning - linking what I experienced doing this to research on how memory actually works.
+Then each week I write up some notes on learning the language, what its taught me, and also write an article on learning - linking what I experienced doing this to research on how memory actually works. Prolog really made me think hard about the challenges of learning something you struggle to understand and you can see my reflections linked to research [here](learning-theory-do-before-know.md).
+
+I've really learnt alot from this language, and you can see my personal reflections [here](learning-from-prolog.md).
 
 ## Why Seven Languages?
 
